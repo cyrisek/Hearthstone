@@ -10,6 +10,14 @@
     background-color: #eee;
 }
 
+.card.done {
+    cursor: default;
+}
+
+.card.done {
+    cursor: default;
+}
+
 .card:hover {
     box-shadow: inset 0px 0px 0px 10px black;
     box sizing: border-box;
