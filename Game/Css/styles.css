@@ -7,7 +7,7 @@
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: #013132;
+    background-color: #eee;
 }
 
 .card:hover {
@@ -46,4 +46,8 @@
 
 .cyan {
     background-color: cyan;
+}
+
+.color-hidden {
+    background-color: #eee;
 }
