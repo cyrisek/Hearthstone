@@ -15,12 +15,23 @@ console.log('here');
         if (!clickedCard) {
             clickedCard = target;
         } else if (clickedCard) {
-            if (clickedCard.getAttribute('data-color')) === target.getAttribute('data-color')){
-                clickedCard.className += ' done';
-                target.className += ' done';
+             // cheack if the card matches color//
+            if (
+                clickedCard.getAttribute('data-color') === 
+                target.getAttribute('data-color')
+                ){
+                console.log('cards ARE equal');
+                // clickedCard.className += ' done';
+                // target.className += ' done';
+            } else {
+                console.log('cards not equal');
+                setTimeout(() => {
+                    clickedCard.className.replace('done', '').trim();
+                    target.className.replace('done', '').trim();
+                }, 500);
             }
         }
 
-    // cheack if the card matches color//
+    
 
 }
