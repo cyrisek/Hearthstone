@@ -16,20 +16,36 @@ body {
 
 }
 .card {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  background-color: #E6AF2E;
+}
+.card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+  
+}
+
+/* .card {
     display: inline-block;
     width: 100px;
     height: 100px;
     background-color: #E6AF2E;
-}
+} */
 
 .card.done {
     cursor: default;
+    }
+.done {
+    transform: rotateY(180deg);
 }
-
-.card.done {
-    cursor: default;
-}
-
 .card:hover {
     box-shadow: inset 0px 0px 0px 5px #632B30;
     box sizing: border-box;
