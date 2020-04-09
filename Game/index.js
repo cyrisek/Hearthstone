@@ -1,14 +1,19 @@
-console.log('here');
+let clickedCard = null;
+let preventClick = false;
+let combosFound = 0;
 
     function onCardClicked(e) {
         const target = e.currentTarget;
-        if (target.className.includes('done')){
+        if (
+            preventClick ||
+            target === clickedCard ||
+            target.className.includes('done')){
             return;
         }
         target.className = target.className
             .replace('color-hidden', '')
             .trim();
-        console.log(target.getAttribute('data-color'));
+        target.className += ' done';
 
 
         //keep the track of card, display color//
@@ -17,18 +22,28 @@ console.log('here');
         } else if (clickedCard) {
              // cheack if the card matches color//
             if (
-                clickedCard.getAttribute('data-color') === 
+                clickedCard.getAttribute('data-color') !== 
                 target.getAttribute('data-color')
-                ){
-                console.log('cards ARE equal');
+                )               
                 // clickedCard.className += ' done';
                 // target.className += ' done';
-            } else {
-                console.log('cards not equal');
+              {
+                preventClick = true;
                 setTimeout(() => {
-                    clickedCard.className.replace('done', '').trim();
-                    target.className.replace('done', '').trim();
+                    console.log('we are here!!!');
+                    clickedCard.className =
+                        clickedCard.className.replace('done', '').trim() + ' color-hidden';
+                    target.className =
+                        target.className.replace('done', '').trim() + ' color-hidden';
+                    clickedCard = null;
+                    preventClick = false;
                 }, 500);
+            } else {
+                cobosFound++;
+                cardClicked =  null;
+                if (combosFound === 8) {
+                    alert('YOU WIN')
+                }
             }
         }
 
