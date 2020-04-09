@@ -1,3 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 10%;
+    background-color: #37500a;
+    height: 100vh;
+}
+
 .row {
     text-align: center;
 
@@ -7,7 +19,7 @@
     display: inline-block;
     width: 100px;
     height: 100px;
-    background-color: #eee;
+    background-color: #E6AF2E;
 }
 
 .card.done {
@@ -19,7 +31,7 @@
 }
 
 .card:hover {
-    box-shadow: inset 0px 0px 0px 10px black;
+    box-shadow: inset 0px 0px 0px 5px #632B30;
     box sizing: border-box;
 
 }
@@ -57,5 +69,5 @@
 }
 
 .color-hidden {
-    background-color: #eee;
+    background-color: #E6AF2E;
 }
