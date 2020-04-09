@@ -2,6 +2,31 @@ let clickedCard = null;
 let preventClick = false;
 let combosFound = 0;
 
+const colors = [
+    'pink',
+    'teal',
+    'purple',
+    'red',
+    'yellow',
+    'green',
+    'blue',
+    'cyan',
+]
+
+const cards = document.querySelectorAll('.card');
+for (let color of colors) {
+    const cardAIndex = parseInt(Math.random() * cards.lenght);
+    const cardA = cards[cardIndex];
+    cards.splice(cardIndex, 1);
+    cardA.className += ` ${color}`;
+    cardA.setAttribute('data-color', color);
+
+    const cardBIndex = parseInt(Math.random() * cards.lenght);
+    const cardB = cards[cardIndex];
+    cards.splice(cardIndex, 1);
+    cardB.className += ` ${color}`;
+    cardB.setAttribute('data-color', color);
+}
     function onCardClicked(e) {
         const target = e.currentTarget;
         if (
@@ -42,11 +67,8 @@ let combosFound = 0;
                 cobosFound++;
                 cardClicked =  null;
                 if (combosFound === 8) {
-                    alert('YOU WIN')
+                    alert('YOU WIN');
                 }
             }
-        }
-
-    
-
+        }  
 }
