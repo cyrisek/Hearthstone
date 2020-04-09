@@ -5,7 +5,8 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
+  padding-top: 20px;
   display: flex;
   background-image: url('../img/Background.jpg');
   background-repeat: no-repeat; 
@@ -56,3 +57,5 @@ body {
 .front-face {
   transform: rotateY(180deg);
 }
+
+  
