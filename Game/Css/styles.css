@@ -1,89 +1,58 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin-top: 10%;
-    background-color: #37500a;
-    height: 100vh;
+  height: 100vh;
+  display: flex;
+  background-image: url('../img/Background.jpg');
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.row {
-    text-align: center;
-
-
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
 }
-.card {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
   margin: 5px;
   position: relative;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
   box-shadow: 1px 1px 1px rgba(0,0,0,.3);
-  background-color: #E6AF2E;
 }
-.card:active {
+
+.memory-card:active {
   transform: scale(0.97);
   transition: transform .2s;
-  
 }
 
-/* .card {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: #E6AF2E;
-} */
-
-.card.done {
-    cursor: default;
-    }
-.done {
-    transform: rotateY(180deg);
-}
-.card:hover {
-    box-shadow: inset 0px 0px 0px 5px #632B30;
-    box sizing: border-box;
-
+.memory-card.flip {
+  transform: rotateY(180deg);
 }
 
-.red {
-    background-color: red;
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  position: absolute;
+  border-radius: 1px;
+  backface-visibility: hidden;
+  background: rgba(38, 68, 51, 0.568);
 }
 
-.green {
-    background-color: green;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.yellow {
-    background-color: yellow;
-}
-
-.teal {
-    background-color:teal;
-}
-
-.purple {
-    background-color: purple;
-}
-
-.pink {
-    background-color: pink;
-}
-
-.cyan {
-    background-color: cyan;
-}
-
-.color-hidden {
-    background-color: #E6AF2E;
+.front-face {
+  transform: rotateY(180deg);
 }

@@ -1,75 +1,60 @@
-let clickedCard = null;
-let preventClick = false;
+const cards = document.querySelectorAll('.memory-card');
+
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
 let combosFound = 0;
 
-const colors = [
-  'pink',
-  'yellow',
-  'red',
-  'cyan',
-  'blue',
-  'teal',
-  'purple',
-  'green'
-];
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
 
-const cards = [...document.querySelectorAll('.card')];
-for (let color of colors) {
-  const cardAIndex = parseInt(Math.random() * cards.length);
-  const cardA = cards[cardAIndex];
-  cards.splice(cardAIndex, 1);
-  cardA.className += ` ${color}`;
-  cardA.setAttribute('data-color', color);
+  this.classList.add('flip');
 
-  const cardBIndex = parseInt(Math.random() * cards.length);
-  const cardB = cards[cardBIndex];
-  cards.splice(cardBIndex, 1);
-  cardB.className += ` ${color}`;
-  cardB.setAttribute('data-color', color);
-}
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
 
-function onCardClicked(e) {
-  const target = e.currentTarget;
-
-  if (
-    preventClick ||
-    target === clickedCard ||
-    target.className.includes('done')
-  ) {
     return;
   }
 
-  target.className = target.className
-    .replace('color-hidden', '')
-    .trim();
-  target.className += ' done';
+  secondCard = this;
+  checkForMatch();
+} 
+function checkForMatch() {
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
-  if (!clickedCard) {
-    // if we haven't clicked a card, keep track of the card, display it's color
-    clickedCard = target;
-  } else if (clickedCard) {
-    // if we have already clicked a card, check if the new card matches the old card color
-    if (
-      clickedCard.getAttribute('data-color') !==
-      target.getAttribute('data-color')
-    ) {
-      preventClick = true;
-      setTimeout(() => {
-        clickedCard.className =
-          clickedCard.className.replace('done', '').trim() +
-          ' color-hidden';
-        target.className =
-          target.className.replace('done', '').trim() +
-          ' color-hidden';
-        clickedCard = null;
-        preventClick = false;
-      }, 500);
-    } else {
-      combosFound++;
-      clickedCard = null;
-      if (combosFound === 8) {
-        alert('YOU WIN');
-      }
-    }
-  }
+  isMatch ? disableCards() : unflipCards();
 }
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 1500);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
+
+cards.forEach(card => card.addEventListener('click', flipCard));

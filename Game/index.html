@@ -1,93 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta 
-            name="viewport"
-            content="width=devive-width, initial-scale=1.0"
-        />
-        <meta gttp-equiv="X-UA-Compatibile" content="ie=edge" />
-        <title>Memory Games</title>
+<head>
+  <meta charset="UTF-8">
 
-        <link rel="stylesheet" href="Css/styles.css" />
-    </head>
-    <body>
-        <div class="row">
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div            
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-        </div>
-        <div class="row">
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card  color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-        </div>
-        <div class="row">
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-        </div>
-        <div class="row">
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div 
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-            <div             
-            class="card color-hidden"
-            onclick="onCardClicked(event)"
-            ></div>
-        </div>
+  <title>Memory Game  2</title>
 
+  <link rel="stylesheet" href="Css/styles.css">
+</head>
+<body>
+  <section class="memory-game">
+    <div class="memory-card" data-framework="Elf">
+      <img class="front-face" src="img/Elf.png" alt="Elf" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="Elf">
+      <img class="front-face" src="img/Elf.png" alt="Elf" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
 
+    <div class="memory-card" data-framework="harpy">
+      <img class="front-face" src="img/harpy.png" alt="harpy" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="harpy">
+      <img class="front-face" src="img/harpy.png" alt="harpy" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
 
+    <div class="memory-card" data-framework="Hozen">
+      <img class="front-face" src="img/Hozen.png" alt="Hozen" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="Hozen">
+      <img class="front-face" src="img/Hozen.png" alt="Hozen" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
 
-        <script src="index.js"></script>
-    </body>
+    <div class="memory-card" data-framework="Khadgar">
+      <img class="front-face" src="img/Khadgar.png" alt="Khadgar" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="Khadgar">
+      <img class="front-face" src="img/Khadgar.png" alt="Khadgar" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+
+    <div class="memory-card" data-framework="Kobold">
+      <img class="front-face" src="img/Kobold.png" alt="Kobold" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="Kobold">
+      <img class="front-face" src="img/Kobold.png" alt="Kobold" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+
+    <div class="memory-card" data-framework="Murloc">
+      <img class="front-face" src="img/Murloc.png" alt="Murloc" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="Murloc">
+      <img class="front-face" src="img/Murloc.png" alt="Murloc" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="undead">
+      <img class="front-face" src="img/undead.png" alt="undead" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="undead">
+      <img class="front-face" src="img/undead.png" alt="undead" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="luna">
+      <img class="front-face" src="img/luna.png" alt="luna" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+    <div class="memory-card" data-framework="luna">
+      <img class="front-face" src="img/luna.png" alt="luna" />
+      <img class="back-face" src="img/heartstone.png" alt="heartstone" />
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
 </html>
