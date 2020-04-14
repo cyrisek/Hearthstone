@@ -5,27 +5,31 @@
 }
 
 body {
-  height: 100%;
-  padding-top: 20px;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   background-image: url('../img/Background.jpg');
   background-repeat: no-repeat; 
   background-attachment: fixed;
   background-size: cover;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .memory-game {
   width: 640px;
-  height: 640px;
-  margin: auto;
+  height: 853px;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
+  position: absolute;
+  z-index: 0;
 }
 
 .memory-card {
   width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
+  height: calc(25% - 10px);
   margin: 5px;
   position: relative;
   transform: scale(1);
@@ -56,6 +60,17 @@ body {
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+#modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
 }
 
   

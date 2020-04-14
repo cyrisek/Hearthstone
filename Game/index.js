@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.memory-card');
+const modal = document.getElementById("modal");
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -22,11 +23,20 @@ function flipCard() {
   secondCard = this;
   checkForMatch();
   
-} 
+}
+
+function isFlipped(card) {
+	return card.classList.contains("flip");
+}
+
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
   isMatch ? disableCards() : unflipCards();
+  
+  if (Array.from(cards).every(isFlipped)) {
+	  modal.style.display = "flex";
+  }
 }
 
 function disableCards() {
