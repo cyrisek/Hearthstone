@@ -73,4 +73,38 @@ body {
   justify-content: center;
 }
 
-  
+@media (max-width: 992px) {
+
+.memory-game {
+  width: 540px;
+  height: 720px;
+ }
+ #modal {
+  width: 100%;
+  height: 100%;
+}
+}  
+
+@media (max-width: 768px) {
+
+.memory-game {
+  width: 360px;
+  height: 480px;
+}
+#modal {
+  width: 100%;
+  height: 100%;
+}
+}
+
+@media (max-width: 576px) {
+
+.memory-game {
+  width: 330px;
+  height: 440px;
+}
+#modal {
+  width: 100%;
+  height: 100%;
+}
+}
