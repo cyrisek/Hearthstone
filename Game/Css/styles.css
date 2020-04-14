@@ -96,15 +96,3 @@ body {
   height: 100%;
 }
 }
-
-@media (max-width: 576px) {
-
-.memory-game {
-  width: 330px;
-  height: 440px;
-}
-#modal {
-  width: 100%;
-  height: 100%;
-}
-}
