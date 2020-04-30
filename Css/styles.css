@@ -76,23 +76,17 @@ body {
 @media (max-width: 992px) {
 
 .memory-game {
-  width: 540px;
-  height: 720px;
- }
- #modal {
-  width: 100%;
-  height: 100%;
-}
+  width: 90%;
+  height: 90%;
+  padding-left: 7%;
+  padding-right: 7%;
 }  
 
 @media (max-width: 768px) {
 
 .memory-game {
-  width: 360px;
-  height: 480px;
-}
-#modal {
-  width: 100%;
-  height: 100%;
-}
+  width: 90%;
+  height: 90%;
+  padding-left: 7%;
+  padding-right: 7%;
 }
