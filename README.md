@@ -3,38 +3,48 @@
 ## What is the Memory Game
 This is a simple game built to test a users memory. There's a deck of cards with different icons. This game is using Hearthstone art. 
 
+## UX
+* created a deck of cards that shuffles when game is refreshed
+* introducing front and back face of the card
+* adding flip animation when click on card
+* reseting card flip if cards did not match
+* create a pop-up modal when player wins game
+* can not click more than 1 pair of cards at a time
+
 ## Instructions
 * Click on a card
-* Keep revealing cards and working your memory to remember each unveiled card.
-* Match cards properly.
+* Keep revealing cards and working your memory to remember each unveiled card
+* Match cards properly
 
 ## Features
 * add/remove an element class
 * add/remove event listeners
 * select elements in the DOM with querySelector
-* iterate through lists with forEach
 * timeout
 * html5: data-attribute
 * css3: positioning, flexbox, perspective, backface-visibility, transitions
-* modal after finishing the game.
+* modal after finishing the game
+* padding left and right when scaling down to preserve 4:3 aspect ratio
 
 ### Features Left to Implement
-- Animation needs to be improved.
-- Responsiveness doesn't work as intended.
-- Adding timer and levels
+* Animation needs to be improved
+* Responsiveness doesn't work as intended
+* Adding timer and levels
 
 ## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
+* HTML5
+* CSS3
+* JavaScript
 
 ## Testing
-- Multiple fails on how to trigger modal.
-- Introducing front and back of the card.
+* Multiple fails on how to trigger modal
+* Introducing front and back of the card
 
 ## Deployment
-Using GitPod to run my project locally.
-Using GitHub for website publishing.
+Using GitPod to run my project locally
+Using GitHub for website publishing
+Click this link to play the game: https://cyrisek.github.io/Hearthstone/index.html
+
 
 
 
