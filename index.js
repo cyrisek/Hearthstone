@@ -4,7 +4,7 @@ const modal = document.getElementById("modal");
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
-let combosFound = 0;
+
 
 function flipCard() {
   if (lockBoard) return;
