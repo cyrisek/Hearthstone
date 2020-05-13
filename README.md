@@ -10,6 +10,7 @@ This is a simple game built to test a users memory. There's a deck of cards with
 * reseting card flip if cards did not match
 * create a pop-up modal when player wins game
 * can not click more than 1 pair of cards at a time
+* play again button after finishing game
 
 ## Instructions
 * Click on a card
@@ -25,11 +26,14 @@ This is a simple game built to test a users memory. There's a deck of cards with
 * css3: positioning, flexbox, perspective, backface-visibility, transitions
 * modal after finishing the game
 * padding left and right when scaling down to preserve 4:3 aspect ratio
+* refresh function
+* animated "Play Again" button
 
 ### Features Left to Implement
 * Animation needs to be improved
 * Responsiveness doesn't work as intended
 * Adding timer and levels
+* Scaling img down
 
 ## Technologies Used
 * HTML5
@@ -39,6 +43,7 @@ This is a simple game built to test a users memory. There's a deck of cards with
 ## Testing
 * Multiple fails on how to trigger modal
 * Introducing front and back of the card
+* Implementing restart game button, ending up with refresh page function
 
 ## Deployment
 Using GitPod to run my project locally
