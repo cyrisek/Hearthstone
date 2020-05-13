@@ -57,6 +57,10 @@ function unflipCards() {
   }, 1500);
 }
 
+function resetGame() {
+    location.reload();
+}
+
 function resetBoard() {
   [hasFlippedCard, lockBoard] = [false, false];
   [firstCard, secondCard] = [null, null];
@@ -68,11 +72,5 @@ function resetBoard() {
     card.style.order = randomPos;
   });
 })();
-function resetGame() {
-    let hasFlippedCard = false;
-    let lockBoard = false;
-    let firstCard, secondCard;
-    shuffle();
-};
+
 cards.forEach(card => card.addEventListener('click', flipCard));
-getElementById("modal").addEventListener("click", resetGame);
