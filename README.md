@@ -16,6 +16,7 @@ This is a simple game built to test and improve a users memory. There's a deck o
 * Click on a card
 * Keep revealing cards and working your memory to remember each unveiled card
 * Match cards properly
+* Play again
 
 ## Features
 * add/remove an element class
