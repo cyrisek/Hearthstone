@@ -1,7 +1,7 @@
 # Memory Game Hearthstone Clone
 
 ## What is the Memory Game
-This is a simple game built to test a users memory. There's a deck of cards with different icons. This game is using Hearthstone art. 
+This is a simple game built to test and improve a users memory. There's a deck of cards with different icons. This game is using Hearthstone art. 
 
 ## UX
 * created a deck of cards that shuffles when game is refreshed
