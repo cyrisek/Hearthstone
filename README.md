@@ -1,16 +1,16 @@
 # Memory Game Hearthstone Clone
 
 ## What is the Memory Game
-This is a simple game built to test and improve a users memory. There's a deck of cards with different icons. This game is using Hearthstone art. 
+This is a simple game built to test and improve users memory. There's a deck of cards with different icons. This game is using Hearthstone art. 
 
 ## UX
-* created a deck of cards that shuffles when game is refreshed
+* created a deck of cards that shuffles when the game is refreshed
 * introducing front and back face of the card
-* adding flip animation when click on card
-* reseting card flip if cards did not match
-* create a pop-up modal when player wins game
+* adding flip animation when clicking on the card
+* resetting card flip if cards did not match
+* create a pop-up modal when a player wins the game
 * can not click more than 1 pair of cards at a time
-* play again button after finishing game
+* play again button after finishing a game
 
 ## Instructions
 * Click on a card
@@ -34,7 +34,7 @@ This is a simple game built to test and improve a users memory. There's a deck o
 * Animation needs to be improved
 * Responsiveness doesn't work as intended
 * Adding timer and levels
-* Scaling img down
+* Scaling IMG down
 
 ## Technologies Used
 * HTML5
@@ -44,7 +44,7 @@ This is a simple game built to test and improve a users memory. There's a deck o
 ## Testing
 * Multiple fails on how to trigger modal
 * Introducing front and back of the card
-* Implementing restart game button, ending up with refresh page function
+* Implementing the restart game button, ending up with refresh page function
 
 ## Deployment
 Using GitPod to run my project locally
