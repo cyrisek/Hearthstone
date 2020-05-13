@@ -35,7 +35,8 @@ function checkForMatch() {
   isMatch ? disableCards() : unflipCards();
   
   if (Array.from(cards).every(isFlipped)) {
-	  modal.style.display = "flex";
+      modal.style.display = "flex";
+      button.style.display = "flex";
   }
 }
 

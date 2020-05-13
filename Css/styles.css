@@ -81,6 +81,7 @@ button {
   margin-right: -50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  display: none;
   color: #20bf6b !important;
   text-transform: uppercase;
   font-size: 20px;
